@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    color: #333;
+  }
+  .navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .btn {
+    border-radius: 25px;
+  }
+  .seat-map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+  }
+  .seat {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+  }
+  .seat.selected {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+  }
+  .seat.occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+    color: white;
+    border-color: #dc3545;
+  }
+  .ticket {
+    background: url('https://i.imgur.com/xsZB8Hk.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .ticket::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+  }
+  .ticket * {
+    position: relative;
+    z-index: 1;
+  }
+  .payment-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    animation: slideUp 0.6s ease-in-out;
+  }
+  
+  .popular{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 3%;
+    
+    }
+    .b1{
+    flex-basis: 40%;
+    
+    
+    }
+    .b2{
+    
+    flex-basis: 40%;
+    }
+    .coffe{
+    width: 100%;
+    height: 50vh;
+    border: 1px solid ;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px 1px rgb(45, 45, 43);
+    }
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
